@@ -24,7 +24,7 @@ jobs:
 
       - name: Get version
         id: version
-        run: echo "value=$(node -p 'require(\"./package.json\").version')" >> "$GITHUB_OUTPUT"
+        run: echo "value=$(jq -r .version package.json)" >> "$GITHUB_OUTPUT"
 
       - run: npm publish --provenance --access public
         env:
