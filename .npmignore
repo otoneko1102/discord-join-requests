@@ -1,0 +1,21 @@
+# package.json "files" is the primary allowlist; this is a safety net.
+
+# source / build config
+src/
+.prettierrc
+tsconfig.json
+tsdown.config.mts
+
+# sample app
+app/
+
+# dev / env
+.private/
+node_modules/
+.env
+.env.*
+.vscode/
+.idea/
+
+# project docs not meant for npm consumers
+CLAUDE.md

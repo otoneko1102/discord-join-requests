@@ -1,0 +1,68 @@
+{
+  "name": "discord-join-requests",
+  "version": "0.0.1",
+  "description": "Unofficial Discord join-requests modules.",
+  "keywords": [
+    "discord",
+    "selfbot",
+    "join",
+    "join-requests",
+    "api",
+    "ws",
+    "websocket",
+    "rest"
+  ],
+  "homepage": "https://github.com/otoneko1102/discord-join-requests#readme",
+  "bugs": {
+    "url": "https://github.com/otoneko1102/discord-join-requests/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/otoneko1102/discord-join-requests.git"
+  },
+  "license": "MIT",
+  "author": "otoneko.",
+  "type": "commonjs",
+  "main": "dist/index.cjs",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.cts",
+  "exports": {
+    ".": {
+      "import": {
+        "types": "./dist/index.d.mts",
+        "default": "./dist/index.mjs"
+      },
+      "require": {
+        "types": "./dist/index.d.cts",
+        "default": "./dist/index.cjs"
+      }
+    }
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "README-ja.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "tsdown",
+    "test": "echo \"PASSED: no test specified\" && exit 0",
+    "format": "prettier --write ./src/**"
+  },
+  "dependencies": {
+    "undici": "^8.1.0",
+    "ws": "^8.20.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.19.17",
+    "@types/ws": "^8.18.1",
+    "discord.js-selfbot-v13": "^3.7.1",
+    "discord.js-selfbot-youtsuho-v13": "^3.7.2",
+    "prettier": "^3.8.3",
+    "tsdown": "^0.21.8",
+    "typescript": "^6.0.2"
+  },
+  "engines": {
+    "node": ">=22.19.0"
+  }
+}

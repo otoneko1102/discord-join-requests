@@ -1,0 +1,26 @@
+{
+  "name": "discord-join-requests-sample",
+  "version": "1.0.0",
+  "description": "Sample app for discord-join-requests",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "tsdown",
+    "prestart": "npm run build",
+    "start": "node --env-file-if-exists=.env dist/index.mjs",
+    "predev": "npm run build",
+    "dev": "node --env-file-if-exists=.env.local dist/index.mjs",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "debug": "^4.4.0",
+    "discord-join-requests": "file:..",
+    "discord.js-selfbot-youtsuho-v13": "^3.7.2",
+    "dotenv": "^17.4.2"
+  },
+  "devDependencies": {
+    "@types/node": "^22.19.17",
+    "tsdown": "^0.21.8",
+    "typescript": "^6.0.2"
+  }
+}
